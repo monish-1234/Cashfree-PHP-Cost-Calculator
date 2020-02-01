@@ -257,12 +257,15 @@ Amount - </font>
         $amt = $_POST['amt'];
 
         $y=1.75/100*$amt;
-        echo '<h1> Payment Gateway Charge ='.$y;
-        $z=18/100*y;
-        echo 'GST For Payment Gateway Charge = '.$z;
-         echo 'Total Charges = '.$y+$z;
-         echo 'Amount Received to Bank Account = '.$x-($y+$z);
-        echo 'To receive ",$x," Amount must be set to '.$x+($y+$z);
+        echo '<h1> Payment Gateway Charge ='.$y.'<br>';
+        $z=18/100*$y;
+        echo 'GST For Payment Gateway Charge = '.$z.'<br>';
+        $a=$y+$z;
+        echo 'Total Charges = '.$a.'<br>';
+        $b=$amt-($y+$z);
+        echo 'Amount Received to Bank Account = '.$b.'<br>';
+        $c=$amt+($y+$z);
+        echo 'To receive "'.$amt.'", Amount must be set to '.$c;
         echo '</h1>';
 }
 ?>
